@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Blog Page</title>
+</head>
+<body>
+    <header>
+        <h1>Engineering Capstone</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">APU CubeSat News</a></li>
+        </ul>
+    </nav>
+    <main>
+	<h2>Block Diagrams</h2>
+	<img src="image22.png" alt="General Flow Chart">
+	<h4>Directioal (transmission & reception) and omnidirectional (reception) </h2>
+	<img src="image23.png" alt="Directional and Omnidirectional Chart">
+	</ul>
+	<h2>Power System</h2>
+	<img src="image24.png" alt="Power System Chart">
+	<h2>Results and Conclusion</h2>
+	<h2>Project Status</h2>
+  <img src="image26.png" alt="Project Status">
+	<h4>Satellite Tracking</h4>
+	<ul> 
+	<li><h4>Yaesu rotators in tandem with MacDoppler have successfully tracked AMSAT LEO CubeSats to +/- 1 degrees 
+	</ul>
+	<h4>Lifespan</h4>
+	<ul> 
+	<li><h4> Estimates of criitical hardware project a 5+ year lifspan with minor maintenance
+	</ul>
+  <h4>Reception</h4>
+	<ul> 
+	<li><h4> Eggbeater has successfully recived a signal via FoxTelem
+	</ul>
+	<h4>Antenna Pointing</h2>
+	<ul> 
+	<li><h4> Rotator system is successfully able to orient towards a point to +/- 1 degrees
+	</ul>
+  <h4>Software</h4>
+	<ul> 
+	<li><h4> FoxTelem is capable of tracking and reciving while Satnogs has been implemenented but requires testing
+	</ul>
+  <h4>Tranmission</h4>
+	<ul> 
+	<li><h4> Tranmission testing will occure once Ettus radio arrives and is installed in existing infrastructure
+	</ul>
+	<h4>Results from FoxTelem Tracking </h2>
+	<img src="image27.png" alt="Results from FoxTelem Tracking">
+	</ul>
+	<h4>Challenges</h2>
+	<img src="image28.png" alt="Challenges">
+	<h4>Pi Updates and Networking</h4>
+	<ul> 
+	<li><h4>The OS ( Operating System ) mismatched and required multiple reinstalls of the OS 
+	</ul>
+	<h4>Rotator Range</h4>
+	<ul> 
+	<li><h4>Software for the Yaesu rotator controller resulted in a limited elevation range
+	</ul>
+	<h4>Purchasing</h4>
+	<ul> 
+	<li><h4>Purchasing permission issues caused delays and amplified supple chain problems  
+	</ul>
+	<h4>Future Work</h2>
+	<img src="image29.png" alt="Future work">
+	<ul> 
+	<li><h4>Switching borrowed Yaesu radio for the more versattile ETTUS SDR
+	</ul>
+	<ul> 
+	<li><h4>Installing a transfer switch between and 2M and 400 Antennas
+	</ul>
+	<ul> 
+	<li><h4>Performing additional testing to establish reception and tranmission capabilites 
+	</ul>
+	<ul> 
+	<li><h4>Determine and correct radio frequency 
+	</ul>
+	<h4>Acknowledgements</h2>
+	<img src="image30.png" alt="Acknowledgements">
+	<ul>
+	<h4>BTS "Behind The Scenes"</h2>
+	<img src="image31.png" alt="BTS">
+	</ul>
+	
+    </main>
+    <footer>
+        <p>&copy; 2024 Azusa Pacific University</p>
+    </footer>
+</body>
+</html>
