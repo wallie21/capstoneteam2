@@ -114,9 +114,40 @@
 	<p>And finally a holder for a half-size breadboard and an Arduino Uno: <a href="https://www.mouser.com/ProductDetail/474-	DEV-11235">Mouser 474-DEV-11235</a>, Sparkfun P/N DEV-11235.</p>
 	<img src="product4.jpg" alt="Product">
 
-	<h2></h2>
-	<h3></h3>
-	<p></p>
+	<h2>11/30/2022</h2>
+	<h3>Professor Marshall</h3>
+	<p><a href="mailto:ncovarrubias21@apu.edu">Nathanael Covarrubias</a> - You have the .brd file from github.  Please upload it to 	oshpark.com and they'll provide you a price to 	produce three copies.  Please e-mail me the price for standard and expedited 	fabrication.  My intention is to check in with Dr. 	Yeh.  If ECS can't cover it I may ask permission to bug Dr. Huang or 	Joshua Canada to see if CLAS can find some loose change under 	a couch cushion.  We already have the ESP32 and RISC-V Feather and 	the iceWerx, so the bare board would actually get us pretty 	far, we don't need much past that to solder and test one unit.  	(Although I'd like an RBF switch, which is $25 or such, pretty 	expensive for one fancy button.)</p>
+	<p>A little more work, but once you know how, just 10 minutes, you could export the .brd design into a zip file of "gerber" files, 	and upload to Digi-Key's DKRed service and get a quote from them.  They are a little more expensive, but maybe higher quality, and 	you usually get a few free boards from them.  I sort of like that the DKRed boards are red, that's what Pumpkin uses sometimes to 	differentiate a non-flight board, a board intended only for testing/development.  See below for the steps.</p>
+	<p>Please log the cost estimate to the google doc log file, and please log your work today on the PCB to the log book.  </p>
+	<p><a href="mailto:ncovarrubias21@apu.edu">Nathanael Covarrubias</a>, <a href="mailto:bilau20@apu.edu">Brandon Lau</a>, <a 	href="mailto:dflorendo19@apu.edu">David Enzo Florendo</a>, <a href="mailto:sdaibyan20@apu.edu">Syuzanna Daibyan</a>, <a 	href="mailto:sjackson20@apu.edu">Stephan Jackson</a> - please use this research log 	document, and please log even avenues that 	don't pan out.  Dr. Thomas reminds us that ABET wants to see our work towards 	solutions, including the things we tried that 	didn't work or where we decided to go a different route to the final solution.</p>
+	<p><b>How to export gerber files from Eagle and upload to DKRed:</b></p>
+	<p>In the Eagle Board window, click File > CAM Processor…</p>
+	<p>Make sure that “template_2_layer.cam” is selected at the top left, and click Process Job at the bottom right.</p>
+	<img src="instruction1.jpg" alt="instruction">
+	<p>Verify that your project’s directory is indicated, and click Select Folder at the bottom.</p>
+	<img src="instruction2.jpg" alt="instruction">
+	<img src="instruction3.jpg" alt="instruction">
+	<p>In your project’s directory is a new folder CAMOutputs</p>
+	<img src="instruction4.jpg" alt="instruction">
+	<p>What we need for Digikey’s DKRed service are the NC Drill .xln (<a href="https://en.wikipedia.org/wiki/PCB_NC_formats">	Excellon</a>) file in DrillFiles and some of the Gerber files in 	the GerberFiles directory.</p>
+	<p>To put the right files into a zip file, in Windows you can simply highlight DrillFiles and GerberFiles, right click, Send To, 	Compressed (zipped) folder.  Vola, you have a zip file with your Gerber files.</p>
+	<p>Then navigate to <a href="https://www.digikey.com/en/pcb-builder/?p=dkred">https://www.digikey.com/en/pcb-builder/?p=dkred</a>, 	click on </p>
+	<img src="instruction5.jpg" alt="instruction">
+	<p>and upload your zip file.</p>
+	<p>Digikey’s tool correctly identifies the files and generates a preview, with tabs across the top for different views.</p>
+	<img src="instruction6.jpg" alt="instruction">
+	<p>Is it ironic that DKRed’s rendering engine shows the soldermask as green?</p>
+	<img src="instruction7.jpg" alt="instruction">
+	<img src="instruction8.jpg" alt="instruction">
+	<p>In addition to Digi-key’s DKRed prototype service for very small quantity orders, they also provide a marketplace to let you 	compare bids from other companies to fabricate higher quantities of your boards.</p>
+	<p>https://www.digikey.com/en/pcb-builder/</p>
+	<img src="instruction9.jpg" alt="instruction">
+	<p>Generating the Gerber files also generated a Bill of Materials (BOM) file.</p>
+	<p>Look in Documents\EAGLE\projects\(your project name)\CAMOutputs\Assembly</p>
+	<p>Look for a file which is the name of your board, with pcb.txt at the end.  It is a fixed-width text file.  It’s a little 	awkward, but it can be opened with Excel.</p>
+	<img src="instruction10.jpg" alt="instruction">
+	<p>That file includes some of the information on the parts to order to make your board.</p>
+
 
 	<h2></h2>
 	<h3></h3>
