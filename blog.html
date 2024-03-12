@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Blog Page</title>
+    <title>CS Capstones</title>
 </head>
 <body>
     <header>
-        <h1>Current Developments</h1>
+        <h1>APU CubeSat Log</h1>
     </header>
     <nav>
         <ul>
@@ -16,14 +16,157 @@
             <li><a href="blog.html">APU CubeSat News</a></li>
             <li><a href="engineering.html">The Ground Station: Engineering Capstone</a></li>
             <li><a href="computer_science.html">Software Engineering: Computer Science Capstones</a></li>
-            <li><a href="faculty.html">Meet the Faculty</a></li>
+	    <li><a href="faculty.html">Meet the Faculty</a></li>
         </ul>
     </nav>
     <main>
-        <p>Get the latest here.</p>
+	
+	<h2>Tuesday 12/20/2022</h2>
+	<h3>Professor Marshall</h3>
+	<p>DVI-D and ⅛” audio cables installed at the Mini Mill workstation computer. Still needs two IEC
+ 	power cables and a mouse pad</p>
+
+	<h2>Wednesday 12/14/2022</h2>
+	<h3>Professor Marshall</h3>
+	<p>For posterity, what APU purchased on eBay auction 165546144816 is:</p>
+	<p><h4>Items Included:</h4>
+	<ul><li>Pumpkin CubeSat Kit Development Board PCB</li>
+	<h4>Items Not Included:</h4>
+	<ul><li>Software</li>
+	<li>Power Supply</li>
+	<li>Cables</li>
+	<li>Anything Not Listed Above</li></ul></p>
+	
+	<p><img src="board1.jpg" alt="Dev Board"></p>
+	<p><img src="board2.jpg" alt="Dev Board"></p>
+	<p><img src="board3.jpg" alt="Dev Board"></p>
+	<p><img src="board4.jpg" alt="Dev Board"></p>
+	<p><img src="board5.jpg" alt="Dev Board"></p>
+	<p><img src="board6.jpg" alt="Dev Board"></p>
+	
+
+	<h2>Tuesday 12/13/2022</h2>
+	<h3>Professor Marshall</h3>
+	<p>I picked up our used Pumpkin Development board from Cougar Tech, which APU had purchased on eBay auction 165546144816.  Upon 	opening the box and inspecting the boards, they match what was listed.  A used Pumpkin development main board with the Pluggable 	Processor Module for a PIC24.</p>
+	<p><a href="https://www.pumpkinspace.com/store/p48/Development_Board_%28DB%29.html">CSK Development Board</a> - $1710</p>
+	<p><a href="https://www.pumpkinspace.com/store/p127/Pluggable_Socketed_Processor_Module_E_%28PSPM_E%29.html">PSPM E</a> - $855</p>
+	<p>It did not include the PIC24 processor.  I have one soldered to a module, which I could work to desolder.</p>
+	<p>It was shipped well packed in a silver anti-static bag, pink bubble wrap, and bubble wrap.  It does have some shelf wear - a 	power jack is cracked, a fuse is missing, some jumpers were bent, and one corner has a ding.  But for its age it is in fine shape, 	and appears serviceable.</p>
+	<p>Priority 1 is getting a PIC24 processor for it.  I can try to desolder one we bought attached to a Microchip processor module 	(Digi-key p/n <a href="https://www.digikey.com/en/products/detail/microchip-technology/MA240021/2352011">MA240021-ND</a>).  Also 	APU has ordered two chips, Digi-key p/n <a href="https://www.digikey.com/en/products/detail/microchip-technology/PIC24FJ256GB210-	I-PT/2352074">PIC24FJ256GB210-I/PT-ND</a>, which would just set into the 	Zero Insertion Force (ZIF) socket which Pumpkin 	supplied on the PPM, but they are backordered until circa March, estimated ship 	date 3/21/2023.</p>
+	<p>I asked my friend Joe for advice on removing the PIC24FJ256GB210-I/PT from the MA240021, and he said:</p>
+	<p>Luckily there are no grounding pads on the IC to give you problems, so no heat plate would be necessary.
+	I would just flood the pins with flux; drag solder the ChipQuik onto the pins, and use an exacto knife to apply a slight pressure 	between the corner of the IC and the PCB. Thus breaking any surface tension and lifting the IC off the board. Then under a 	microscope I would clean the IC pins off with a desoldering wick. Or you could do the initial ChipQuik application with the 	soldering Iron, then switch off to the hot air pen to go around the pins while lightly tapping on the IC. Once you get movement on 	the IC just pluck it off the board and clean. So basically how you were planning to proceed. Easy Peasy :)
+	The ChipQuik stays liquid for a long time.</p>
+	<p>ChipQuik from DigiKey: <a href="https://www.digikey.com/en/products/detail/chip-quik-inc/REMKIT/12352150">315-REMKIT-ND</a>   	$11.95</p>
+	<p>Desolder Wick from DigiKey: <a href="https://www.digikey.com/en/products/detail/chemtronics/80-4-5/306983">80-4-5-ND</a>   	$6.26</p>
+	<img src="package1.jpg" alt="Package">
+	<img src="package2.jpg" alt="Package">
+	<img src="package3.jpg" alt="Package">
+	<img src="package4.jpg" alt="Package">
+
+	<p><a href="https://www.digikey.com/en/products/detail/microchip-technology/PG164140/8536593">PG164140-ND</a> 
+	PG164140 Microchip Technology PROGRAMMER MCU PICKIT4</p>
+	<p><a href="https://www.digikey.com/en/products/detail/microchip-technology/AC102015/8638996">AC102015-ND</a> AC102015 Microchip Technology UNIVERSAL ADAPTER BOARD</p>
+
+	<p>When we are ready we can power up the boards even without a processor as a “smoke test”.  Also a next step is purchasing 	ChipQuik 	low-temperature rework solder, so I can get a PIC24 which will fit into our development board.</p>
+
+
+
+
+
+
+
+
+
+
+
+	<h2>12/9/2022</h2>
+	<h3>Professor Marshall</h3>
+	<p>Pablo just returned from some time away, I inquired about the status of our order, and he said the used Pumpkin Development 		board is waiting for me in Cougar Tech (the computer store inside the Campus Store, formerly known as Cougar Byte, in what was 	formerly known as the APU Bookstore.)  (I had been checking in ECS, IMT, and the mail room, but hadn't thought to check Cougar 	Tech for the package.)</p>
+	<p>I'll pick it up early next week, check it out, and leave it in the CubeSat research closet.  There is already a PIC programmer 	and adapter boards in the research closet.</p>
+	<p>We had a very small amount of grant money left which needed to be spent, so I had APU purchase two PIC24 processors for the 	Pumpkin Development Board.  Digi-key <a href="https://www.digikey.com/en/products/detail/microchip-technology/PIC24FJ256GB210-I-	PT/2352074">PIC24FJ256GB210-I/PT-ND</a>. </p>
+	<p>They are backordered (global supply chain issues / chip shortage).  Digi-key estimates they will ship on 3/21/2023.</p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
+	<h2></h2>
+	<h3></h3>
+	<p></p>
+
     </main>
     <footer>
-        <p>&copy; 2024 Azusa Pacific University</p>
+	
+       
     </footer>
 </body>
 </html>
