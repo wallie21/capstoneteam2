@@ -26,3 +26,26 @@ footer {
     bottom: 0;
     width: 100%;
 }
+/* Targets the <ul> element containing the navigation links */
+ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Optional: Removes padding to align list items to the left edge */
+    margin: 0; /* Optional: Removes default margin */
+	text-align: center; /* Centers the buttons horizontally */
+}
+li {
+    display: inline-block; /* Displays list items inline */
+}
+
+/* Style for each list item */
+.rounded-button {
+	display: inline-block; /* Necessary for applying padding and width */
+    background-color: #990000; /* Red background */
+    color: #ffffff; /* White text */
+    padding: 10px 20px; /* Top and bottom padding, left and right padding */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 16px; /* Example font size */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color change on hover */
+	margin: 5px;
+}
