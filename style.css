@@ -80,3 +80,6 @@ nav ul {
     justify-content: center; 
 }
 
+figcaption {
+    text-align: center;
+}
