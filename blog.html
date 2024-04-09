@@ -7,6 +7,8 @@
     <title>CS Capstones</title>
 </head>
 <body>
+
+
     <header>
         <h1>APU CubeSat Log</h1>
     </header>
@@ -22,6 +24,62 @@
 	    </nav>
     <main>
 	
+
+
+
+	    <h2>Wednesday 4/3/2023</h2>
+	    <h3>Waseem</h3>
+
+    <p>As I was not having much luck running the FreeRTOS demo in the MPLAB IDE, Professor Marshall suggested I try my luck at getting an ESP32 to run FreeRTOS in the ESP-IDF. He pointed me        to this board (I got the one with stacking headers installed):
+<a href="https://www.adafruit.com/product/3619">https://www.adafruit.com/product/3619</a></p>
+
+   <p> I managed to get both the hello world and blink demos (which both use FreeRTOS) to run without error. The setup/installation process was not very straightforward, but these are the    resources that helped me get everything going:</p>
+
+	<p><a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html">https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html</a></p>
+
+	<p><a href="https://github.com/espressif/idf-eclipse-plugin/blob/master/README.md">https://github.com/espressif/idf-eclipse-plugin/blob/master/README.md</a></p>
+
+	<p><a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html">https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html</a></p>
+
+	<p><a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/windows-setup.html#get-started-windows-first-steps">https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/windows-setup.html#get-started-windows-first-steps</a></p>
+
+	<p>As my hardware knowledge is pretty limited and the ESP-IDF is very new to me, I have neither managed to see where “hello world” is being printed to the console or figured out the way to connect the led to the stacking headers to get demo programs 1 and 2 to work, respectively. I will try to figure out how to do this (probably with Professor Marshall’s help). For know it’s pretty safe to say the ESP-IDF is a better environment to use going forward.</p>
+
+
+	    <h2>Wednesday 3/20/2024</h2>
+	<h3>Waseem</h3>
+
+<p>As for the time being trying to program the Pumpkin Board with FreeRTOS seems to be a dead end, I’m shifting focus towards programming an ESP32 using an ESP-IDF, which has FreeRTOS integrated as a component.<p>
+<p>I’ve ordered this <a href="https://www.adafruit.com/product/3619">Adafruit ESP32 (with headers installed)</a> and downloaded the Espressif IDE and the ESP-IDF powershell. The ESP32 Should arrive in a week or so. </p>
+<img src="esp32-1.jpg" alt="ESP32">
+<img src="esp32-2.jpg" alt="ESP32">
+<img src="esp32-3.jpg" alt="ESP32">
+<p>Once I have it I will try to make sure everything is working in the Arduino IDE before switching over to ESP-IDF. If I can get the ESP-IDF Hello World sample project working I will switch gears and do what I hoped to do with the Pumpkin board, which is to get several LEDs blinking and go from there.</p>
+
+	<h2>Wednesday 3/13/2024</h2>
+<h3>Waseem</h3>
+
+<p>I spent a fair amount of time trying to get the Salvo demo application to work, to no avail. I found that a lot of important files were missing from the Salvo lite download, and the MPLAB IDE reflected in the documentation is entirely different from the one available today. For these reasons I decided to try out FreeRTOS. It has been a couple of weeks working with the demo configured for a PIC24 (albeit not the PIC24FJ256GB210 we are working with, but something similar). This demo needs a c30 compiler to run. I have not got it to run yet. I’ve been stuck at this error when trying to build: </p>
+
+<p>make -f nbproject/Makefile-default.mk SUBPROJECTS= .build-conf
+make[1]: Entering directory 'C:/Users/Wasee/OneDrive/Documents/RTOSDemo_PIC24.X'
+make  -f nbproject/Makefile-default.mk dist/default/debug/RTOSDemo_PIC24.X.debug.elf
+make[2]: *** No rule to make target '../../Desktop/FreeRTOSv202212.01 \(3\)/FreeRTOSv202212.01/FreeRTOS/Demo/PIC24_MPLAB/main.c', needed by 'build/default/debug/_ext/1140278103/main.o'.  Stop.
+make[2]: Entering directory 'C:/Users/Wasee/OneDrive/Documents/RTOSDemo_PIC24.X'
+make[1]: *** [.build-conf] Error 2
+make[2]: Leaving directory 'C:/Users/Wasee/OneDrive/Documents/RTOSDemo_PIC24.X'
+make: *** [.build-impl] Error 2
+nbproject/Makefile-default.mk:85: recipe for target '.build-conf' failed
+make[1]: Leaving directory 'C:/Users/Wasee/OneDrive/Documents/RTOSDemo_PIC24.X'
+nbproject/Makefile-impl.mk:39: recipe for target '.build-impl' failed
+
+BUILD FAILED (exit value 2, total time: 176ms)</p>
+
+
+<p>I checked and the makefiles are there (I haven’t changed a thing yet). It’s discouraging that I’m running into problems running the demo right out of the starting gate, but I think I will post on the MPLAB forum to see what’s going on. </p>
+
+
+
 	<h2>Tuesday 12/20/2022</h2>
 	<h3>Professor Marshall</h3>
 	<p>DVI-D and ⅛” audio cables installed at the Mini Mill workstation computer. Still needs two IEC
