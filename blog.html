@@ -78,6 +78,59 @@ BUILD FAILED (exit value 2, total time: 176ms)</p>
 
 <p>I checked and the makefiles are there (I haven’t changed a thing yet). It’s discouraging that I’m running into problems running the demo right out of the starting gate, but I think I will post on the MPLAB forum to see what’s going on. </p>
 
+	<h2>Thursday 1/18/2024</h2>
+	<h3>Waseem</h3>
+
+<p>I was able to program the LED Professor Marshall and I hooked up to the board yesterday to turn on.</p>
+
+<img src="led.jpg" alt="LED">
+
+
+<h2>Wednesday 1/17/2024</h2>
+<h3>Prof Marshall</h3>
+
+<p>Page 65 of the Microchip <a href="https://ww1.microchip.com/downloads/en/DeviceDoc/PICkit4%20In-Circuit%20DebuggerUG-DS50002751B.pdf">MPLAB PICkit 4 In-Circuit Debugger User's Guide</a> shows the pinout of the PICkit4 programmer/debugger device.</p>
+
+<p>Additional background information on programming Microchip microcontrollers is in the <a href="https://ww1.microchip.com/downloads/en/DeviceDoc/30277d.pdf">In-Circuit Serial Programming (ICSP) Guide.</a></p>
+
+<p>The used Pumpkin Cubesat boards which APU purchased are:
+<a href=https://www.pumpkinspace.com/store/p48/Development_Board_%28DB%29.html">CSK Development Board</a>   705-00194 Rev D (S/N 274, Assy Rev 01)  $1710
+<a href="https://www.pumpkinspace.com/store/p127/Pluggable_Socketed_Processor_Module_E_%28PSPM_E%29.html">PSPM E</a>                              705-00687 Rev B (S/N 108, Assy Rev 01)    $855</p>
+
+<p>See CubeSat Student Research Log Fall 2022.</p>
+
+<p>The <a href="https://www.pumpkininc.com/space/datasheet/710-00711-B_DS_PSPM_E.pdf">Pluggable Socketed Processor Module (PSPM) E</a> board has a 6-pin 1/10” header, reference designator J3, near the modular jack.</p>
+
+<p>Per the PSPM E Data Sheet “Customers can connect … Microchip PICKit to the PSPM's 6-pin 1x6 0.100” pitch inline header J3.“</p>
+
+<p>So it might be as easy as plugging the PICkit4 module into the PSPM E board.  If the module standing vertically on the 6-pin header, with its attached microUSB cable is putting too much strain on the equipment, we could whip up a “Dupont” cable as a short 1:1 M-F extension.</p>
+
+<p>For posterity the <a href="https://www.digikey.com/en/products/detail/microchip-technology/AC164110/1212490">Microchip AC164110</a> is another way to connect the PICkit4 and the PSPM E for ICSP programming, but seems unnecessary.</p>
+
+<p>Prof Marshall and Waseem
+We looked over the jumpers, decided on trying to power the board through USB connector J4 on the processor module, no smoke came out and the VCC light only on the development board lit up green. PICkit4 is plugged into the processor module VIA ICSP, and is powered up through Waseem’s laptop but the board (VCC) loses power. We are powering it up using both Prof Marshall and Waseem’s laptops. </p>
+
+<p>Waseem’s computer has successfully connected to the board. Using MPLAB we got this message after clicking “Read Device Memory Main Project”:</p>
+
+<p>Target device PIC24FJ256GB210 found.
+Device Revision Id  = 0x4
+Device Id = 0x41060000</p>
+
+
+<p>Tutorial on blinking an LED using MPLab X and a PIC microcontroller:
+<a href="https://ww1.microchip.com/downloads/en/DeviceDoc/MicrochipMinutes_ep5_blink.pdf">Microchip Minutes: blink Application Lab</a> </p>
+
+<p>Using this tutorial, (https://www.theengineertutor.com/tutorial-on-how-to-blink-a-led-using-mplab-x/) but substituting the header file to match what we are working with (it should be p24FJ256GB210.h) we got the code to successfully run in the MPLAB IDE.</p>
+
+
+<p>Per <a href="https://www.pumpkininc.com/space/datasheet/710-00711-B_DS_PSPM_E.pdf">https://www.pumpkininc.com/space/datasheet/710-00711-B_DS_PSPM_E.pdf</a>
+GPIO pin RF1 on the PIC24F goes to IO.24 on the Processor module, which goes to H2.24 on the Development Board.  J.R. used “dupont” jumper wires to hook the anode of a red LED to H2.24, and the cathode to a 10K resistor, which then goes to H2.30, DGND.</p>
+
+<p>The hope is if Waseem can work out MPLab X’s pin mapping function, he can blink the LED as a hardware-hello-world.</p>
+
+
+
+
 
 
 	<h2>Tuesday 12/20/2022</h2>
